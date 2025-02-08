@@ -8,9 +8,9 @@ class QRCodePDFEmbedder:
     def generate_qr(self):
         qr = qrcode.QRCode(
             version=1,
-            error_correction=qrcode.constants.ERROR_CORRECT_L,
+            error_correction=qrcode.constants.ERROR_CORRECT_H,
             box_size=10,
-            border=4,
+            border=2,
         )
         qr.add_data(self.pdf_url)
         qr.make(fit=True)
