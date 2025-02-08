@@ -6,4 +6,4 @@ install:
 
 run:
 	@echo "Running the application..."
-	python3 src/main.py
+	python3 main.py
