@@ -6,4 +6,14 @@ class QRCodePDFEmbedder:
         self.output_qr_path = output_qr_path
 
     def generate_qr(self):
-        print(f'Hello world!')
+        qr = qrcode.QRCode(
+            version=1,
+            error_correction=qrcode.constants.ERROR_CORRECT_L,
+            box_size=10,
+            border=4,
+        )
+        qr.add_data(self.pdf_url)
+        qr.make(fit=True)
+        img = qr.make_image(fill_color="black", back_color="white")
+        img.save(self.output_qr_path)
+        print(f'QR code saved to {self.output_qr_path}')

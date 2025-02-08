@@ -1,7 +1,7 @@
 from modules.qrcodes_pdf import QRCodePDFEmbedder
 
 if __name__ == '__main__':
-    pdf_url = ''
+    pdf_url = 'hello world!'
     output_qr_path = 'qr_code.png'
 
     embedder = QRCodePDFEmbedder(pdf_url, output_qr_path)
